@@ -1,0 +1,13 @@
+fastapi==0.116.1
+uvicorn==0.35.0
+sqlalchemy==2.0.36
+psycopg2-binary
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+pydantic[email]==2.11.7
+pydantic-settings==2.10.1
+redis==5.2.1
+python-dotenv==1.1.1
+aiokafka==0.11.0
+psycopg2-binary==2.9.10
