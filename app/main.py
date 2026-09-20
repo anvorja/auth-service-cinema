@@ -3,6 +3,7 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from prometheus_fastapi_instrumentator import Instrumentator
 
 from app.api.routes import router
 
@@ -52,6 +53,9 @@ app = FastAPI(
     description="Authentication and token management service",
     lifespan=lifespan,
 )
+
+# Métricas de Prometheus (latencia/conteo por endpoint) en /metrics
+Instrumentator().instrument(app).expose(app)
 
 app.add_middleware(
     CORSMiddleware,

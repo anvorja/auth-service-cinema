@@ -13,3 +13,4 @@ redis==5.2.1
 python-dotenv==1.1.1
 aiokafka==0.11.0
 psycopg2-binary==2.9.10
+prometheus-fastapi-instrumentator==7.0.0
