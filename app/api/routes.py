@@ -16,12 +16,12 @@ from app.schemas.auth import (
     UserRegister, UserLogin, Token, UserResponse,
     LogoutResponse, VerifyTokenResponse,
 )
+from app.api.dependencies import get_current_user, get_current_token
+from app.models.user import User
 
 
 class RefreshRequest(_BaseModel):
     refresh_token: str
-from app.api.dependencies import get_current_user, get_current_token
-from app.models.user import User
 
 logger = logging.getLogger(__name__)
 

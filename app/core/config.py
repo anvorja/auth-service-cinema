@@ -1,7 +1,5 @@
 # app/core/config.py
-from pydantic import field_validator
 from pydantic_settings import BaseSettings
-from typing import List, Any
 
 
 class Settings(BaseSettings):
